@@ -1,8 +1,4 @@
-Preview
-Code
-github
 
-'use client'
 import { Avatar, Badge, Button, Popover, Table } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react'
 

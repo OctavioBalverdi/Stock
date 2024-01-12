@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "keep-react";
 import { Gear, SquaresFour, Cube } from "phosphor-react";
 

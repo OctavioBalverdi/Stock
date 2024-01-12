@@ -1,4 +1,4 @@
-"use client";
+
 import { Badge } from "keep-react";
 import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
 

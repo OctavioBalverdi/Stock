@@ -1,4 +1,4 @@
-"use client";
+
 import { Sidebar } from "keep-react";
 import {
   Chat,

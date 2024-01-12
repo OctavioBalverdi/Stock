@@ -1,4 +1,3 @@
-"use client";
 import { Avatar } from "keep-react";
 
 export const AvatarComponent = () => {
