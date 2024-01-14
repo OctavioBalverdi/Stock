@@ -2,3 +2,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+  }
+
+  .contenedor{
+    display: flex;
+
+  }
+  
+  .sidebar-container {
+    width: 200px; /* Ajusta según tus necesidades */
+    background-color: #f0f0f0; /* Ajusta el color de fondo según tus necesidades */
+    height: 100%;
+    
+  }
+  
+  .content-container {
+    flex: 1;
+    padding-left: 200px; /* Ajusta según el ancho de tu menú lateral */
+    padding: 20px; /* Ajusta según tus necesidades */
+    
+  }
+  

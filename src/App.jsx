@@ -1,40 +1,40 @@
-
-import './App.css'
-import {SidebarComponent}  from './Component/MenuLateral'
+import './App.css';
+import { SidebarComponent } from './Component/MenuLateral';
 import {
   BrowserRouter as Router,
   Routes,
   Outlet,
   Route
-} from 'react-router-dom'
-import { Stock } from './pages/stock'
-import { Entrada } from './pages/entrada'
+} from 'react-router-dom';
+import { Stock } from './pages/stock';
+import { Entrada } from './pages/entrada';
+import { Salida } from './pages/salida';
 
 function App() {
-
-
   return (
-    <Router >
-    <Routes>
-      <Route path='/' element={<Root />}>
-      <Route index element={<Stock />} />
-        <Route path='/entrada' element={<Entrada />} />
-        <Route path='/salida' element={<Salida />} />
-        
-      </Route>
-    </Routes>
-  </Router>
-
-  )
+    <Router>
+      <Routes>
+        <Route path='/' element={<Root />}>
+          <Route path='/stock' element={<Stock />} />
+          <Route path='/entrada' element={<Entrada />} />
+          <Route path='/salida' element={<Salida />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
-const Root = () =>
+
+const Root = () => (
   <>
-    <div>
+    <div className="contenedor">
+    <div className="sidebar-container">
       <SidebarComponent />
     </div>
-    <div>
+    <div className="content-container">
       <Outlet />
     </div>
+    </div>
   </>
+);
 
-export default App
+export default App;
