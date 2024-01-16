@@ -1,5 +1,5 @@
-
 import { Sidebar } from "keep-react";
+import { Link,NavLink } from "react-router-dom";
 import {
   Chat,
   Handbag,
@@ -10,41 +10,29 @@ import {
   UserPlus,
   Users,
 } from "phosphor-react";
-
 export const SidebarComponent = () => {
+
+  const menuItems = [
+    { id: 1, nombre: 'Producto', ruta: '/producto', icono: <SquaresFour size={24} /> },
+    { id: 2, nombre: 'Stock', ruta: '/stock', icono: <Handbag size={24} /> },
+    { id: 3, nombre: 'Entrada', ruta: '/entrada', icono: <Users size={24} /> },
+    { id: 4, nombre: 'Salida', ruta: '/salida', icono: <ShoppingBagOpen size={24} /> },
+  ]
+
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
       <Sidebar.Logo href="" img="/images/keep.svg" imgAlt="Keep logo" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
-            Dashboard
-          </Sidebar.Item>
-          <Sidebar.Collapse
-            icon={<ShoppingCart size={24} />}
-            label="E-commerce"
-          >
-            <Sidebar.Item href="#" icon={<Handbag size={24} />}>
-              Products
-            </Sidebar.Item>
-          </Sidebar.Collapse>
-          <Sidebar.Item href="#" icon={<Chat size={24} />}>
-            Inbox
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<Users size={24} />}>
-            Users
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<ShoppingBagOpen size={24} />}>
-            Products
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<SignIn size={24} />}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<UserPlus size={24} />}>
-            Sign Up
-          </Sidebar.Item>
+          {
+            menuItems.map(element => (
+              <Sidebar.Item icon={element.icono} key={element.id}>
+                <NavLink to={element.ruta}>{element.nombre}</NavLink>
+              </Sidebar.Item>
+            ))
+          }
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
-  );
+  )
 }

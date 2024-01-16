@@ -27,14 +27,15 @@ function App() {
 const Root = () => (
   <>
     <div className="contenedor">
-    <div className="sidebar-container">
-      <SidebarComponent />
-    </div>
-    <div className="content-container">
-      <Outlet />
-    </div>
+      <div className="sidebar-container">
+        <SidebarComponent />
+      </div>
+      <div className="content-container">
+        <Outlet />
+      </div>
     </div>
   </>
+
 );
 
 export default App;
