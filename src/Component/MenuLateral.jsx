@@ -21,7 +21,7 @@ export const SidebarComponent = () => {
 
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
-      <Sidebar.Logo href="" img="/images/keep.svg" imgAlt="Keep logo" />
+      <Sidebar.Logo href="" img="/assets/Logo.svg" imgAlt="" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           {

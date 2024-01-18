@@ -1,8 +1,9 @@
-import { CardComponent } from "../Component/Tarjeta"; 
+import CardContainer from "../Component/NuevaCarta"
+
 
 export const Stock=()=>{
 
     return(
-          <><CardComponent></CardComponent></>
+          <><CardContainer></CardContainer></>
     )
 }
