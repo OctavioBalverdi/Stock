@@ -23,7 +23,7 @@ export const SidebarComponent = () => {
 
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
-      <Sidebar.Logo href="" img="/assets/Logo.svg" imgAlt="" />
+      <Sidebar.Logo href="" img="/assets/img/Logo.jpg" size={32} imgAlt="" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './TarjetaFinal.css'; // Asegúrate de importar tu archivo de estilos
 
-const Tarjeta4 = ({ title, content }) => {
+const TarjetaFinal = ({ title, content }) => {
   return (
     <div className="card">
       <div className="title-1">{title}</div>
@@ -15,4 +15,4 @@ const Tarjeta4 = ({ title, content }) => {
   );
 }
 
-export default Tarjeta4;
+export default TarjetaFinal;

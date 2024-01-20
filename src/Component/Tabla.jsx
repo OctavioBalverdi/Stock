@@ -1,11 +1,12 @@
-import { Avatar, Badge, Button, Popover, Table } from 'keep-react'
-import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react';
+import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
+import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
+import { FechayHora } from './DatePicker';
 
 export const TableComponent = () => {
 
 const dataArray = [
   {
-    avatar: "/images/company/paypal.png",
+    avatar: "/public/paypal-logo.svg",
     name: "Paypal",
     withdrawType: "lo que venga",
     date: "Jan 19, 2022",
@@ -14,7 +15,7 @@ const dataArray = [
     
   },
   {
-    avatar: "/images/company/Visa.png",
+    avatar: "/public/credit-card.svg",
     name: "Visa",
     withdrawType: "Withdraw",
     date: "Jan 10, 2023",
@@ -36,16 +37,11 @@ const dataArray = [
           <div className="flex items-center gap-5">
             <Button type="outlineGray" size="sm">
               <span className="pr-2">
-                <Cube size={24} />
+                <FileXls size={32} color="#134fc9" />
               </span>
-              PUTO EL 
+              Excel
             </Button>
-            <Button type="outlineGray" size="sm">
-              <span className="pr-2">
-                <Cube size={24} />
-              </span>
-              QUE LEE
-            </Button>
+           <FechayHora></FechayHora>
           </div>
         </div>
       </Table.Caption>

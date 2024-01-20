@@ -1,11 +1,15 @@
-
-import Tarjeta4 from "../Component/TarjetaFinal"
-
-
+import BotonBorrar from "../Component/BotonBorrar"
+import BotonEditar from "../Component/BotonEditar"
+import BotonIngresar from "../Component/BotonIngresar"
+import TarjetaFinal from "../Component/TarjetaFinal"
 
 export const Stock=()=>{
 
     return(
-          <><Tarjeta4></Tarjeta4></>
+          <><TarjetaFinal></TarjetaFinal>
+          <BotonIngresar></BotonIngresar>
+          <BotonEditar></BotonEditar>
+          <BotonBorrar></BotonBorrar>
+          </>
     )
 }

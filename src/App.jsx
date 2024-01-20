@@ -9,12 +9,14 @@ import {
 import { Stock } from './pages/stock';
 import { Entrada } from './pages/entrada';
 import { Salida } from './pages/salida';
+import { Logins } from './pages/Logins';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Root />}>
+          <Route index element={<Logins />} />
           <Route path='/stock' element={<Stock />} />
           <Route path='/entrada' element={<Entrada />} />
           <Route path='/salida' element={<Salida />} />
