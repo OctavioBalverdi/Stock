@@ -1,9 +1,9 @@
 import React from 'react';
-import './TarjetaFinal.css'; // Asegúrate de importar tu archivo de estilos
+import './TarjetaStock.css'; // Asegúrate de importar tu archivo de estilos
 import PropTypes from 'prop-types';
 import Logo from '../assets/img/Logo.jpg'
 
-const Card = ({ title, content }) => {
+const TarjetaStock = ({ title, content }) => {
   return (
     <div className="card">
       <div className="title-1">{title}</div>
@@ -20,12 +20,12 @@ const Card = ({ title, content }) => {
   );
 };
 
-Card.propTypes = {
+TarjetaStock.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };
 
-export default Card;
+export default TarjetaStock;
 
 
 

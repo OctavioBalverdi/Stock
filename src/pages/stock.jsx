@@ -1,10 +1,10 @@
 import BotonIngresar from "../Component/BotonIngresar"
-import TarjetaFinal from "../Component/TarjetaFinal"
+import TarjetaStock from "../Component/TarjetaStock"
 
 export const Stock=()=>{
 
     return(
-          <><TarjetaFinal></TarjetaFinal>
+          <><TarjetaStock></TarjetaStock>
           <br /><br />
           <div>
             <BotonIngresar texto = "Ingresar"></BotonIngresar>

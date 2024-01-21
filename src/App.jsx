@@ -10,6 +10,7 @@ import { Stock } from './pages/stock';
 import { Entrada } from './pages/entrada';
 import { Salida } from './pages/salida';
 import { Logins } from './pages/Logins';
+import {Producto} from './pages/Producto'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Root />}>
           <Route index element={<Logins />} />
+          <Route path='/Producto' element={<Producto />} />
           <Route path='/stock' element={<Stock />} />
           <Route path='/entrada' element={<Entrada />} />
           <Route path='/salida' element={<Salida />} />
