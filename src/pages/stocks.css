@@ -1,0 +1,9 @@
+.div{
+    position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus necesidades */
+  left: 0%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: space-between;
+  width:1px;
+}
