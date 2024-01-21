@@ -2,7 +2,7 @@ import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
 import { FechayHora } from './DatePicker';
 
-export const TableComponent = () => {
+export const TableComponent = ( {Texto}) => {
 
 const dataArray = [
   {
@@ -32,7 +32,7 @@ const dataArray = [
       <Table.Caption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">ENTRADA/SALIDA</p>
+            <p className="text-body-1 font-semibold text-metal-600">{Texto}</p>
           </div>
           <div className="flex items-center gap-5">
             <Button type="outlineGray" size="sm">
