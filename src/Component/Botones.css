@@ -9,11 +9,12 @@
     position: relative;
     padding: 8px;
     margin-bottom: 20px;
+    margin: 100px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
     transition: all .15s ease;
-    
+    align-items: flex-end;
   }
   
   .button::before,

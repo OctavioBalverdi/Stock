@@ -1,24 +1,20 @@
 import { Sidebar } from "keep-react";
 import { Link,NavLink } from "react-router-dom";
 import {
-  Chat,
-  Handbag,
-  ShoppingBagOpen,
-  ShoppingCart,
-  SignIn,
-  SquaresFour,
-  UserPlus,
-  Users,
+  Storefront ,
+  ArrowCircleLeft ,
+  StackOverflowLogo ,
+  ArrowCircleRight ,
 } from "phosphor-react";
 
 
 export const SidebarComponent = () => {
 
   const menuItems = [
-    { id: 1, nombre: 'Producto', ruta: '/producto', icono: <SquaresFour size={24} /> },
-    { id: 2, nombre: 'Stock', ruta: '/stock', icono: <Handbag size={24} /> },
-    { id: 3, nombre: 'Entrada', ruta: '/entrada', icono: <Users size={24} /> },
-    { id: 4, nombre: 'Salida', ruta: '/salida', icono: <ShoppingBagOpen size={24} /> },
+    { id: 1, nombre: 'Producto', ruta: '/producto', icono: <Storefront  size={32} color="#7376a0" /> },
+    { id: 2, nombre: 'Stock', ruta: '/stock', icono: <StackOverflowLogo  size={32} color="#0715cf" /> },
+    { id: 3, nombre: 'Entrada', ruta: '/entrada', icono: <ArrowCircleRight  size={32} color="#0adb23"/> },
+    { id: 4, nombre: 'Salida', ruta: '/salida', icono: <ArrowCircleLeft size={32} color="#db0a0a" /> },
   ]
 
   return (
