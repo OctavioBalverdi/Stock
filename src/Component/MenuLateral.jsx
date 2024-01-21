@@ -6,7 +6,7 @@ import {
   StackOverflowLogo ,
   ArrowCircleRight ,
 } from "phosphor-react";
-
+import Logo from '../assets/img/Logo.jpg'
 
 export const SidebarComponent = () => {
 
@@ -19,7 +19,7 @@ export const SidebarComponent = () => {
 
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
-      <Sidebar.Logo href="" img="/assets/img/Logo.jpg" size={32} imgAlt="" />
+      <img  src={Logo} alt="" className='w-[150px] h-[150px] border rounded p-1' />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           {

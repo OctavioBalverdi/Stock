@@ -1,12 +1,13 @@
 import React from 'react';
 import './TarjetaFinal.css'; // Asegúrate de importar tu archivo de estilos
 import PropTypes from 'prop-types';
+import Logo from '../assets/img/Logo.jpg'
 
 const Card = ({ title, content }) => {
   return (
     <div className="card">
       <div className="title-1">{title}</div>
-      <img src="../assets/img/Logo.jpg" alt="Foto" />
+      <img src={Logo} alt="" className='w-[250px] h-[250px] border rounded p-6' />
       <div className="content">
         {content}
       </div>

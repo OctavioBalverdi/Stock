@@ -45,31 +45,31 @@
   height: 32px;
   border-radius: 8px;
   border: none;
-  background-color: #4a2f7c;
+  background-color: #080114;
   color: #fff;
   transition: 0.4s ease-out;
 }
 
 .btn:hover {
   transition: 0.4s ease-out;
-  background-color: #8a4ff8;
+  background-color: #000700;
   color: #ffffff;
-  box-shadow: 0px 0px 20px rgba(157, 71, 255, 0.5),
-    0px 5px 5px -1px rgba(163, 58, 233, 0.25),
-    inset 4px 4px 8px rgba(219, 175, 255, 0.5),
-    inset -4px -4px 8px rgba(137, 19, 216, 0.35);
+  box-shadow: 0px 0px 20px rgba(236, 12, 12, 0.5),
+    0px 5px 5px -1px #df121240,
+    inset 4px 4px 8px rgba(241, 13, 5, 0.5),
+    inset -4px -4px 8px rgba(216, 32, 19, 0.35);
 }
 
 .bar {
   position: relative;
-  top: 142px;
+  top: 32px;
   height: 5px;
   width: 100%;
   border: 25px;
 }
 
 .emptybar {
-  background-color: #201c29;
+  background-color: #000000;
   width: 100%;
   height: 100%;
 }
@@ -80,8 +80,8 @@
   z-index: 3;
   width: 0px;
   height: 100%;
-  background: #d059ff;
-  background: linear-gradient(90deg, #6831cfab, #a777ff 100%);
+  background: #ff5959;
+  background: linear-gradient(90deg, #e72005ab, #f80101 100%);
   transition: 0.6s ease-out;
 }
 
