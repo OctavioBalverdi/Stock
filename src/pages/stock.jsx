@@ -7,9 +7,8 @@ export const Stock=()=>{
           <><TarjetaStock></TarjetaStock>
           <br /><br />
           <div>
-            <BotonIngresar texto = "Ingresar"></BotonIngresar>
-            <BotonIngresar texto = "Editar"></BotonIngresar>
-            <BotonIngresar texto = "Borrar"></BotonIngresar>
+          <BotonIngresar texto = "Entrada" ></BotonIngresar>
+          <BotonIngresar texto = "Salida" ></BotonIngresar>
           </div>
           </>
     )

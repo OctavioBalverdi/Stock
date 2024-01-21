@@ -2,7 +2,7 @@ import React from 'react';
 import "./TarjetaProducto.css";
 import Logo from "../assets/Logo.svg"
 
-const TarjetaProducto = () => {
+const TarjetaProducto = ({Titulo, Descripcion}) => {
   return (
     <section id="card1" className="cards">
       <svg
@@ -18,11 +18,9 @@ const TarjetaProducto = () => {
         ></path>
       </svg>
       <div className="cards__content">
-        <p className="cards__title">Lorem Ipsum</p>
+        <p className="cards__title">{Titulo}</p>
         <p className="cards__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
-          justo vel lorem tincidunt ultrices at non nunc. Donec in sapien
-          viverra, tincidunt augue id, efficitur massa.
+         { Descripcion }
         </p>
       </div>
     </section>
