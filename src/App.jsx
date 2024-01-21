@@ -1,24 +1,22 @@
+import React from 'react';
 import './App.css';
 import { SidebarComponent } from './Component/MenuLateral';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Outlet,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { Stock } from './pages/stock';
 import { Entrada } from './pages/entrada';
 import { Salida } from './pages/salida';
 import { Logins } from './pages/Logins';
-import {Producto} from './pages/Producto'
+import { Producto } from './pages/Producto';
 
 function App() {
+  const isAuthenticated = true; 
+
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Root />}>
-          <Route index element={<Logins />} />
-          <Route path='/Producto' element={<Producto />} />
+        <Route path='/login' element={<Logins />} />
+        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />}>
+          <Route path='/producto' element={<Producto />} />
           <Route path='/stock' element={<Stock />} />
           <Route path='/entrada' element={<Entrada />} />
           <Route path='/salida' element={<Salida />} />
