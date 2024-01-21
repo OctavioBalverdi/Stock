@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState}from 'react';
 import './App.css';
 import { SidebarComponent } from './Component/MenuLateral';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
@@ -9,12 +9,12 @@ import { Logins } from './pages/Logins';
 import { Producto } from './pages/Producto';
 
 function App() {
-  const isAuthenticated = true; 
-
+  const [isAuthenticated,setAutentico]=useState(false)
+   
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Logins />} />
+        <Route path='/login' element={<Logins validar={setAutentico} />} />
         <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />}>
           <Route path='/producto' element={<Producto />} />
           <Route path='/stock' element={<Stock />} />
