@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="container">
       <div className="card">
-        <a className="login">Log in</a>
+        <a className="login">Login</a>
         <div className="inputBox">
           <input type="text" required="required" />
           <span className="user">Username</span>
