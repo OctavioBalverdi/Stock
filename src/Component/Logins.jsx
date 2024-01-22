@@ -2,32 +2,33 @@ import { useState } from "react";
 import './Login.css'; 
 import { useNavigate } from "react-router-dom";
 
-export function Formu({validar}) {
-  const [nombre, setNombre] = useState("");
-  const [contra, setContra] = useState("");
-  const [error, setError] = useState(false);
-  const [user, setUser] = useState([]);
-  const navegador = useNavigate();
-
-  const dejarPasar = (user) => {
-    if (user === "rodrigo") {
-      return  validar(true)
+export function Formu({onlog }) {
+    const [nombre, setNombre] = useState("");
+    const [contra, setContra] = useState("");
+    const [error, setError] = useState(false);
+    const [user, setUser] = useState([]);
+    const navegador = useNavigate();
+  
+    const dejarPasar = () => {
+      if (user === "rodrigo") {
+        onlog();
+        
+       navegador('/');
+      }
+    };
+  
+    const manejarEnviar = (evento) => {
+      evento.preventDefault();
+      if (nombre === "" || contra === "") {
+        setError(true);
+        return;
+      }else{setError(false);
+        setUser([nombre]);
+        dejarPasar();
+        console.log(user);}
       
-    }
-  };
-
-  const manejarEnviar = (evento) => {
-    evento.preventDefault();
-    if (nombre === "" || contra === "") {
-      setError(true);
-      return;
-    }
-    setError(false);
-    setUser([nombre]);
-    dejarPasar(user);
-    console.log(user);
-  };
-
+      };
+  
   return (
     <div className="container">
       <div className="card">

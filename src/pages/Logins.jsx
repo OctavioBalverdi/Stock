@@ -1,8 +1,8 @@
 
 import {Formu} from '../Component/Logins'
 
-export const Logins =()=>{
+export const Logins =({onlog})=>{
     return(
-        <Formu></Formu>
+        <Formu onlog={onlog}></Formu>
     )
 }
