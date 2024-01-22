@@ -2,32 +2,33 @@ import { useState } from "react";
 import './Login.css'; 
 import { useNavigate } from "react-router-dom";
 
-export function Formu({validar}) {
-  const [nombre, setNombre] = useState("");
-  const [contra, setContra] = useState("");
-  const [error, setError] = useState(false);
-  const [user, setUser] = useState([]);
-  const navegador = useNavigate();
-
-  const dejarPasar = (user) => {
-    if (user === "rodrigo") {
-      return  validar(true)
-      
-    }
-  };
-
-  const manejarEnviar = (evento) => {
-    evento.preventDefault();
-    if (nombre === "" || contra === "") {
-      setError(true);
-      return;
-    }
-    setError(false);
-    setUser([nombre]);
-    dejarPasar(user);
-    console.log(user);
-  };
-
+export function Formu({ validar }) {
+    const [nombre, setNombre] = useState("");
+    const [contra, setContra] = useState("");
+    const [error, setError] = useState(false);
+    const [user, setUser] = useState([]);
+    const navegador = useNavigate();
+  
+    const dejarPasar = (user) => {
+      if (user === "rodrigo") {
+        validar(true);
+        // Usa la función `navegador` para redirigir a '/'
+        navegador('/');
+      }
+    };
+  
+    const manejarEnviar = (evento) => {
+      evento.preventDefault();
+      if (nombre === "" || contra === "") {
+        setError(true);
+        return;
+      }
+      setError(false);
+      setUser([nombre]);
+      dejarPasar(user);
+      console.log(user);
+    };
+  
   return (
     <div className="container">
       <div className="card">
