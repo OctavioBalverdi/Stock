@@ -7,21 +7,25 @@ import { Entrada } from './pages/entrada';
 import { Salida } from './pages/salida';
 import { Logins } from './pages/Logins';
 import { Producto } from './pages/Producto';
-
+import { Formu } from './Component/loguinaso2';
 function App() {
   const [isAuthenticated, setAutentico] = useState(false);
 
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Logins validar={setAutentico} />} />
-        {/* Asegúrate de que la ruta de redirección sea '/login' */}
-        <Route path='/login' element={<Navigate to="/login" />} />
-        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />} />
-        <Route path='/producto' element={<Producto />} />
-        <Route path='/stock' element={<Stock />} />
-        <Route path='/entrada' element={<Entrada />} />
-        <Route path='/salida' element={<Salida />} />
+        <Route path='/login' element={<Formu onlog={()=>{setAutentico(true)}} />} />
+        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />}>
+           <Route path='/producto' element={<Producto />} />
+           <Route path='/stock' element={<Stock />} />
+           <Route path='/entrada' element={<Entrada />} />
+           <Route path='/salida' element={<Salida />} />
+
+
+        </Route>
+        
+        
+        
       </Routes>
     </Router>
   );

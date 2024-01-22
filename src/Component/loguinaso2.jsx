@@ -2,18 +2,18 @@ import { useState } from "react";
 import './Login.css'; 
 import { useNavigate } from "react-router-dom";
 
-export function Formu({ validar }) {
+export function Formu({onlog }) {
     const [nombre, setNombre] = useState("");
     const [contra, setContra] = useState("");
     const [error, setError] = useState(false);
     const [user, setUser] = useState([]);
     const navegador = useNavigate();
   
-    const dejarPasar = (user) => {
+    const dejarPasar = () => {
       if (user === "rodrigo") {
-        validar(true);
-        // Usa la función `navegador` para redirigir a '/'
-        navegador('/');
+        onlog();
+        
+       navegador('/');
       }
     };
   
@@ -22,12 +22,12 @@ export function Formu({ validar }) {
       if (nombre === "" || contra === "") {
         setError(true);
         return;
-      }
-      setError(false);
-      setUser([nombre]);
-      dejarPasar(user);
-      console.log(user);
-    };
+      }else{setError(false);
+        setUser([nombre]);
+        dejarPasar();
+        console.log(user);}
+      
+      };
   
   return (
     <div className="container">
