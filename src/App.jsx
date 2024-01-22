@@ -9,7 +9,7 @@ import { Logins } from './pages/Logins';
 import { Producto } from './pages/Producto';
 
 function App() {
-  const [isAuthenticated,setAutentico]=useState(false)
+  const [isAuthenticated,setAutentico]=useState(true)
    
   return (
     <Router>

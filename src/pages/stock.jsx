@@ -9,6 +9,7 @@ export const Stock=()=>{
           <div>
           <BotonIngresar texto = "Entrada" ></BotonIngresar>
           <BotonIngresar texto = "Salida" ></BotonIngresar>
+          <BotonIngresar texto = "Borrar"></BotonIngresar>
           </div>
           </>
     )

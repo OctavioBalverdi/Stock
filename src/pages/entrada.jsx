@@ -1,7 +1,12 @@
-import { TableComponent } from "../Component/Tabla"
+import MatrizComponente from "../Component/Matriz"
+
 
 export const Entrada=()=>{
     return(
-        <TableComponent Texto = "Entrada" ></TableComponent>
+        <MatrizComponente
+        filasIniciales={2}
+        columnasIniciales={7}
+        profundidadesIniciales={2}
+        ></MatrizComponente>
     )
 }

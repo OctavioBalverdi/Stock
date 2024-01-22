@@ -1,5 +1,5 @@
-import Login from "../Component/Login"
-import {Formu} from '../Component/loguinaso2'
+
+import {Formu} from '../Component/Logins'
 
 export const Logins =()=>{
     return(

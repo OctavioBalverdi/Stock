@@ -31,7 +31,7 @@ export function Formu({validar}) {
   return (
     <div className="container">
       <div className="card">
-        <h1 className="login">Login C:</h1>
+        <h1 className="login">Login</h1>
         <div className="inputBox">
           <input
             type="text"
