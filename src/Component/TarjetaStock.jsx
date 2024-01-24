@@ -11,7 +11,7 @@ const TarjetaStock = ({ title, content }) => {
       <div className="content">
         {content}
       </div>
-      <button className="btn">Producto</button>
+      <button className="btn">Entrada</button>
       <div className="bar">
         <div className="emptybar"></div>
         <div className="filledbar"></div>
