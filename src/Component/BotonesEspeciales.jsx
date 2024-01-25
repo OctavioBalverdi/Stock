@@ -1,50 +1,15 @@
+import React from 'react';
+import './Botones.css'; // Asegúrate de tener el archivo CSS correspondiente
 
-import { Badge } from "keep-react";
-import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
-
-export const BadgeComponent = () => {
+const BotonEspecial = ({ texto }) => {
   return (
-    <div className="flex items-center gap-3">
-      <Badge
-        size="sm"
-        colorType="strong"
-        badgeType="outline"
-        color="info"
-        icon={<Check size={20} weight="light" />}
-        iconPosition="right"
-      />
-      <Badge
-        size="sm"
-        colorType="strong"
-        badgeType="outline"
-        color="gray"
-        icon={<Check size={20} weight="light" />}
-        iconPosition="right"
-      />
-      <Badge
-        size="sm"
-        colorType="strong"
-        badgeType="outline"
-        color="error"
-        icon={<XCircle size={20} weight="light" />}
-        iconPosition="right"
-      />
-      <Badge
-        size="sm"
-        colorType="strong"
-        badgeType="outline"
-        color="success"
-        icon={<Checks size={20} weight="light" />}
-        iconPosition="right"
-      />
-      <Badge
-        size="sm"
-        colorType="strong"
-        badgeType="outline"
-        color="warning"
-        icon={<CloudCheck size={20} weight="light" />}
-        iconPosition="right"
-      />
-    </div>
+    <button className="button" >
+      <span className="button_lg">
+        <span className="button_sl"></span>
+        <span className="button_text">{ texto }</span>
+      </span>
+    </button>
   );
-}
+};
+
+export default BotonEspecial;

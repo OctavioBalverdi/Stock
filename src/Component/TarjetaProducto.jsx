@@ -1,27 +1,19 @@
 import React from 'react';
-import "./TarjetaProducto.css";
-import Boton from "../Component/Boton"
-import {  useNavigate } from "react-router-dom"
+import './TarjetaProducto.css';
+import Logo from '../assets/img/Logo.jpg'
 
-
-const TarjetaProducto = ({props}) => {
-
-  const { NombreProducto, descripcion, foto, Calidad ,Peso} = props.datos
-  const navegador=useNavigate()
-
+const TarjetaProducto = ({ title, peso, calidad, details }) => {
   return (
-    <section id="card1" className="cards">
-      <img src={foto} alt={nombre} />
-      <div className="cards__content">
-        <p className="cards__title">{NombreProducto}</p>
-        <p className="cards__description">{Peso}</p>
-        <p className="cards__description">{Calidad}</p>
-        <p className="cards__description">{ descripcion }
-        <Boton>Agregar</Boton><Boton>Editar</Boton><Boton>Borrar</Boton>
-        </p>
+    <div className="cards1">
+      <div className="cards1-details">
+        <p className="text-title">{title}</p>
+        <img src={Logo} alt="" className='w-[180px] h-[150px] border rounded p-1' />
+        <p className="text-body">{peso}</p>
+        <p className="text-body">{calidad}</p>
+        <p className="text-body">{details}</p>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
 export default TarjetaProducto;

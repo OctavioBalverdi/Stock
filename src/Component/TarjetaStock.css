@@ -1,8 +1,8 @@
-.card {
+.cards {
   display: flex;
-  height: 280px;
-  width: 200px;
-  background-color: #2b223f;
+  height: 250px;
+  width: 190px;
+  background-color: #f6f4f8;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #00000044;
   margin-left: 50px;
@@ -11,19 +11,19 @@
   flex-wrap: wrap;
 }
 
-.card:not(:first-child) {
-  margin-left: -50px;
+.cards:not(:first-child) {
+  margin-left: -10px;
 }
 
-.card:hover {
-  transform: translateY(20px);
+.cards:hover {
+  transform: translateY(10px);
   transition: 0.4s ease-out;
   text-shadow: 2px 2px 8px #6e5b94;
 }
 
-.card:hover ~ .card {
+.cards:hover ~ .cards {
   position: relative;
-  left: 50px;
+  left: 0px;
   transform: rotateX(-15deg) rotateY(10deg);
   transition: 0.4s ease-out;
 }
@@ -39,9 +39,22 @@
 
 .btn {
   position: absolute;
-  top: 255px;
+  top: 260px;
   margin: 0 20px;
-  width: 120px;
+  width: 60px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background-color: #080114;
+  color: #fff;
+  transition: 0.4s ease-out;
+}
+
+.btn1{
+  position: absolute;
+  top: 260px;
+  margin: 0 100px;
+  width: 60px;
   height: 32px;
   border-radius: 8px;
   border: none;
@@ -55,8 +68,18 @@
 .btn:hover {
   transition: 0.4s ease-out;
   background-color: #000700;
-  color: #ffffff;
-  box-shadow: 0px 0px 20px rgba(236, 12, 12, 0.5),
+  color: #05f318;
+  box-shadow: 0px 0px 20px rgba(2, 250, 56, 0.5),
+    0px 5px 5px -1px #04f34040,
+    inset 4px 4px 8px rgba(2, 247, 43, 0.5),
+    inset -4px -4px 8px rgba(69, 235, 3, 0.35);
+}
+
+.btn1:hover {
+  transition: 0.4s ease-out;
+  background-color: #070300;
+  color: #fa0404;
+  box-shadow: 0px 0px 20px rgba(247, 1, 1, 0.5),
     0px 5px 5px -1px #df121240,
     inset 4px 4px 8px rgba(241, 13, 5, 0.5),
     inset -4px -4px 8px rgba(216, 32, 19, 0.35);
@@ -66,10 +89,10 @@
 
 .bar {
   position: relative;
-  top: 32px;
-  height: 5px;
+  top: 0px;
+  height: 8px;
   width: 100%;
-  border: 25px;
+  border-radius: 25px;
 }
 
 .emptybar {
@@ -84,12 +107,12 @@
   z-index: 3;
   width: 0px;
   height: 100%;
-  background: #ff5959;
-  background: linear-gradient(90deg, #e72005ab, #f80101 100%);
+  background: #ffffff;
+  background: linear-gradient(90deg, #f7f2f2ab, #2604be 100%);
   transition: 0.6s ease-out;
 }
 
-.card:hover .filledbar {
+.cards:hover .filledbar {
   width: 100%;
   transition: 0.4s ease-out;
 }
@@ -103,7 +126,7 @@
 }
 
 .stroke {
-  stroke: white;
+  stroke: rgb(12, 12, 12);
   stroke-dasharray: 360;
   stroke-dashoffset: 360;
   transition: 0.6s ease-out;

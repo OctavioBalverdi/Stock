@@ -1,4 +1,4 @@
-.card {
+.cardc {
     position: relative;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
   
-  .card::before {
+  .cardc::before {
     content: "";
     position: absolute;
     right: 0;
@@ -56,15 +56,15 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
   
-  .card:hover::before {
+  .cardc:hover::before {
     width: 100%;
   }
   
-  .card:hover {
+  .cardc:hover {
     box-shadow: none;
   }
   
-  .card:hover .btn {
+  .cardc:hover .btn {
     color: #212121;
     background: #e8e8e8;
   }

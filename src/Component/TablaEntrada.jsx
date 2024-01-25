@@ -2,25 +2,43 @@ import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
 import { FechayHora } from './DatePicker';
 
-export const TableComponent = ( {Texto}) => {
+export const TableComponententrada = ( ) => {
 
 const dataArray = [
   {
-    avatar: "/public/paypal-logo.svg",
-    name: "Paypal",
-    withdrawType: "lo que venga",
-    date: "Jan 19, 2022",
+    avatar: "/public/frutilla.svg",
+    name: "Frutilla",
+    Calidad: "Premiun",
+    date: "Enero 19, 2024",
     time: "3:45 pm",
-    amount: "$652.00",
+    amount: "KG: 100",
     
   },
   {
-    avatar: "/public/credit-card.svg",
-    name: "Visa",
-    withdrawType: "Withdraw",
-    date: "Jan 10, 2023",
+    avatar: "/public/mango.svg",
+    name: "Mango",
+    Calidad: "Premiun",
+    date: "Diciembre 10, 2023",
     time: "4:45 pm",
-    amount: "$534.00",
+    amount: "KG: 100",
+  },
+  {
+    avatar: "/public/frutilla.svg",
+    name: "Frutilla",
+    Calidad: "Grande",
+    date: "Enero 19, 2024",
+    time: "3:45 pm",
+    amount: "KG: 100",
+    
+  },
+  {
+    avatar: "/public/cereza.svg",
+    name: "Cereza",
+    Calidad: "Premium",
+    date: "Enero 19, 2024",
+    time: "3:45 pm",
+    amount: "KG: 50",
+    
   },
   
 ];
@@ -32,7 +50,7 @@ const dataArray = [
       <Table.Caption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">{Texto}</p>
+            <p className="text-body-1 font-semibold text-metal-600">Entrada</p>
           </div>
           <div className="flex items-center gap-5">
             <Button type="outlineGray" size="sm">
@@ -55,7 +73,7 @@ const dataArray = [
                     <Avatar shape="circle" img={item.avatar} size="md" />
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{item.name}</p>
-                      <span className="text-body-6 font-normal text-metal-500">{item.withdrawType}</span>
+                      <span className="text-body-6 font-normal text-metal-500">{item.Calidad}</span>
                     </div>
                   </div>
                 </div>
@@ -68,13 +86,7 @@ const dataArray = [
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">{item.amount}</p>
             </Table.Cell>
-            <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">$652.00</p>
-          </Table.Cell>
+            
           <Table.Cell>
             <div className="inline-block">
               <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
@@ -83,8 +95,8 @@ const dataArray = [
             </div>
           </Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+            <p className="text-body-5 font-medium text-metal-500">Calidad</p>
+            <p className="text-body-6 font-normal text-metal-500">Premiun</p>
           </Table.Cell>
           <Table.Cell>
             <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">

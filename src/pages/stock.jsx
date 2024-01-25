@@ -1,11 +1,13 @@
-import BotonIngresar from "../Component/BotonIngresar"
 import TarjetaStock from "../Component/TarjetaStock"
+import "./Stockpag.css";
 
 export const Stock=()=>{
 
     return(
-          <><TarjetaStock></TarjetaStock>
-          <br /><br />
+          <>
+          <div className="TarjetaStock">
+          <TarjetaStock></TarjetaStock>
+          </div>
           </>
     )
 }

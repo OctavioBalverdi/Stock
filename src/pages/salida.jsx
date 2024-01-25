@@ -1,9 +1,9 @@
-import { TableComponent } from "../Component/Tabla"
+import { TableComponentSalida } from "../Component/TablaSalida"
 
 export const Salida =()=>{
     return(
        <>
-       <TableComponent Texto = "Salida"></TableComponent>
+       <TableComponentSalida></TableComponentSalida>
        </>
     )
 }

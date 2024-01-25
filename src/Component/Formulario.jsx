@@ -1,7 +1,10 @@
 import { useState } from "react"
 import "./Formulario.css"
 import CampoTexto from "../Component/CampoTexto"
-import Boton from '../Component/Boton'
+import Boton from "./Boton"
+import ListaPeso from "./ListaPeso"
+import ListaCalidad from "./ListaCalidad"
+
 
 
 const Formularios = (props) => {
@@ -9,7 +12,8 @@ const Formularios = (props) => {
     const [foto, actualizarFoto] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
     const [Calidad, actualizarCalidad] = useState("")
-    const [Peso, actualizarPeso] = useState("")
+    const [Peso, ActualizarPeso] = useState("")
+    
     
 
     const { registrarColaborador } = props
@@ -27,9 +31,11 @@ const Formularios = (props) => {
     }
 
 
-    return <section className="formulario">
+    return  <section className="formulario">
+        <div className="ubicacion">
         <form onSubmit={manejarEnvio}>
             <h2>Producto</h2>
+            <div className="Camp">
             <CampoTexto
                 titulo="Nombre Producto"
                 placeholder="Ingresar Nombre Producto"
@@ -51,22 +57,18 @@ const Formularios = (props) => {
                 valor={descripcion}
                 actualizarValor={actualizarDescripcion}
             />
-            <CampoTexto
+            <ListaCalidad
                 titulo="Calidad"
-                placeholder="Ingresar Calidad"
-                required
-                valor={Calidad}
-                actualizarValor={actualizarCalidad}
+                selecOption = {Calidad}
+                
             />
-            <CampoTexto
-                titulo="Peso"
-                placeholder="Ingresar Peso"
-                required
-                valor={Peso}
-                actualizarValor={actualizarPeso}
+            <ListaPeso
+                 titulo="Peso"
             />
+            </div>
             <Boton>Crear</Boton>
         </form>
+        </div>
     </section>
 }
 
