@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import './TarjetaStock.css'; // Asegúrate de importar tu archivo de estilos
-import PropTypes from 'prop-types';
 import Logo from '../assets/img/Logo.jpg'
-import FormularioStock from './FormularioStock';
+import CodigodeBarra from './CodigodeBarras2';
 
 const TarjetaStock = ({ title, content }) => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const [mostrarFormulario2, setMostrarFormulario2] = useState(false);
 
   const handleIngresarClick = () => {
     // Mostrar el formulario al hacer clic en "Entrada"
-    setMostrarFormulario(false);}
+    setMostrarFormulario(true);}
+    const handleIngresarClick2 = () => {
+      // Mostrar el formulario al hacer clic en "Entrada"
+      setMostrarFormulario2(true);}
 
   return (
     <div className="cards">
@@ -18,23 +21,19 @@ const TarjetaStock = ({ title, content }) => {
       <div className="content">
         {content}
       </div>
-      <button className="btn" onIngresarClick={handleIngresarClick} >Entrada</button>
-      <button className="btn1">Salida</button>
+      <button className="btn" onClick={handleIngresarClick} >Entrada</button>
+      <button className="btn1" onClick={handleIngresarClick2}>Salida</button>
       <div className="bar">
         <div className="emptybar"></div>
         <div className="filledbar"></div>
       </div>
       {/* Mostrar el formulario si mostrarFormulario es true */}
-      {mostrarFormulario && <FormularioStock />}
+      {mostrarFormulario && <CodigodeBarra Texto="INGRESAR"></CodigodeBarra>}
+      {mostrarFormulario2 && <CodigodeBarra Texto="SALIDA"></CodigodeBarra>}
     </div>
   );
 };
 
-
-TarjetaStock.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-};
 
 export default TarjetaStock;
 

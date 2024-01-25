@@ -4,6 +4,7 @@ import CampoTexto from "../Component/CampoTexto"
 import Boton from "./Boton"
 import ListaPeso from "./ListaPeso"
 import ListaCalidad from "./ListaCalidad"
+import EscanerComponente from "./EscanerCodigo"
 
 
 
@@ -66,7 +67,7 @@ const Formularios = (props) => {
                  titulo="Peso"
             />
             </div>
-            <Boton>Crear</Boton>
+           <div><EscanerComponente Texto = "Crear"></EscanerComponente></div>
         </form>
         </div>
     </section>

@@ -25,7 +25,7 @@ export const Producto =()=>{
         </div>
         <div className="PosicionBottons">
           <BotonIngresar texto = "Agregar" onIngresarClick={handleIngresarClick} ></BotonIngresar>
-          <BotonIngresar texto = "Borrar"></BotonIngresar>
+          <BotonIngresar texto = "Editar"></BotonIngresar>
           <BotonIngresar texto = "Eliminar"></BotonIngresar>
         </div>
 

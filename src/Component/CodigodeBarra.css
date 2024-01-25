@@ -1,0 +1,31 @@
+.CodigoDeBarras2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .CodigoLabel2 {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .CodigoInput2 {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .CodigoButton2 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .CodigoButton2:hover {
+    background-color: #2980b9;
+  }

@@ -7,6 +7,10 @@ export const Stock=()=>{
           <>
           <div className="TarjetaStock">
           <TarjetaStock></TarjetaStock>
+          <TarjetaStock></TarjetaStock>
+          <TarjetaStock></TarjetaStock>
+          <TarjetaStock></TarjetaStock>
+          <TarjetaStock></TarjetaStock>
           </div>
           </>
     )
