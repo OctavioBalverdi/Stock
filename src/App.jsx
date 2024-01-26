@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-import { SidebarComponent } from './Component/MenuLateral';
+import { SidebarComponent } from './pages/Component/MenuLateral';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { Stock } from './pages/stock';
-import { Entrada } from './pages/entrada';
-import { Salida } from './pages/salida'
-import { Formu } from './Component/Logins';
-import {Producto} from'./pages/Producto'; 
+import { Stock } from './pages/domain/stock';
+import { Entrada } from './pages/domain/entrada';
+import { Salida } from './pages/domain/salida'
+import { Logins } from './pages/Component/Logins';
+import {Producto} from'./pages/domain/Producto'; 
+
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Formu onlog={()=>{setAutentico(false)}} />} />
+        <Route path='/login' element={<Logins onlog={()=>{setAutentico(false)}} />} />
         <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />}>
            <Route path='/producto' element={<Producto />} />
            <Route path='/stock' element={<Stock />} />

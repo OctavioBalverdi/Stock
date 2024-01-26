@@ -1,4 +1,4 @@
-.CodigoDeBarras2{
+.CodigoDeBarras1{
     display: block;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,12 @@
   
   
   /* Estilos del campo de entrada */
-  .CodigoLabel2 {
+  .CodigoLabel1 {
     display: block;
     margin: 10px 0;
   }
   
-  .CodigoInput2 {
+  .CodigoInput1 {
     padding: 10px;
     font-size: 16px;
     width: 100%;
@@ -31,7 +31,7 @@
   }
   
   /* Estilos del botón */
-  .CodigoButton2 {
+  .CodigoButton1 {
     background-color: #e5e9e6;
     color: #000000;
     padding: 12px 20px;
@@ -41,6 +41,6 @@
     cursor: pointer;
   }
   
-  .CodigoButton2:hover {
-    background-color: #f50f07;
+  .CodigoButton1:hover {
+    background-color: #fd0404;
   }

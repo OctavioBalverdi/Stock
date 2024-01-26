@@ -1,24 +1,25 @@
 import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
-import { FechayHora } from './DatePicker';
+import { FechayHora } from '../DatePicker';
 
-export const TableComponentSalida = ( ) => {
+
+export const TablaEntrada = ( ) => {
 
 const dataArray = [
   {
-    avatar: "/public/Cereza.svg",
-    name: "Cereza",
-    Calidad: "Grande",
-    date: "Enero 9, 2024",
+    avatar: "/public/frutilla.svg",
+    name: "Frutilla",
+    Calidad: "Premiun",
+    date: "Enero 19, 2024",
     time: "3:45 pm",
-    amount: "KG: 85",
+    amount: "KG: 100",
     
   },
   {
     avatar: "/public/mango.svg",
     name: "Mango",
     Calidad: "Premiun",
-    date: "Diciembre 8, 2023",
+    date: "Diciembre 10, 2023",
     time: "4:45 pm",
     amount: "KG: 100",
   },
@@ -26,18 +27,18 @@ const dataArray = [
     avatar: "/public/frutilla.svg",
     name: "Frutilla",
     Calidad: "Grande",
-    date: "Enero 15, 2024",
+    date: "Enero 19, 2024",
     time: "3:45 pm",
-    amount: "KG: 90",
+    amount: "KG: 100",
     
   },
   {
-    avatar: "/public/Frambuesa.svg",
-    name: "Frambuesa",
+    avatar: "/public/cereza.svg",
+    name: "Cereza",
     Calidad: "Premium",
-    date: "Enero 5, 2024",
+    date: "Enero 19, 2024",
     time: "3:45 pm",
-    amount: "KG: 55",
+    amount: "KG: 50",
     
   },
   
@@ -50,7 +51,7 @@ const dataArray = [
       <Table.Caption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">Salida</p>
+            <p className="text-body-1 font-semibold text-metal-600">Entrada</p>
           </div>
           <div className="flex items-center gap-5">
             <Button type="outlineGray" size="sm">
@@ -59,7 +60,7 @@ const dataArray = [
               </span>
               Excel
             </Button>
-           <FechayHora></FechayHora>
+           <FechayHora/>
           </div>
         </div>
       </Table.Caption>

@@ -1,5 +1,5 @@
 
-import TarjetaStock from "../Component/TarjetaStock";
+import TarjetaStock from "../Component/tarjetas/TarjetaStock";
 
 import "./Stockpag.css";
 

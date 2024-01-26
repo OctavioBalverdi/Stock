@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Login.css'; 
 import { useNavigate } from "react-router-dom";
 
-export function Formu({onlog }) {
+export function Logins({onlog }) {
     const [nombre, setNombre] = useState("");
     const [contra, setContra] = useState("");
     const [error, setError] = useState(false);

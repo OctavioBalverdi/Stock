@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './TarjetaStock.css'; // Asegúrate de importar tu archivo de estilos
-import Logo from '../assets/img/Logo.jpg'
-import CodigodeBarra2 from './CodigodeBarras2';
-import CodigodeBarras1 from './CodigodeBarra1';
+import Logo from '../img/Logo.jpg'
+import CodigodeBarra2 from '../codigodebarra/CodigodeBarras2';
+import CodigodeBarras1 from '../codigodebarra/CodigodeBarra1';
 
 const TarjetaStock = ({ title, content }) => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);

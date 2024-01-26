@@ -6,7 +6,7 @@ import {
   StackOverflowLogo ,
   ArrowCircleRight ,
 } from "phosphor-react";
-import Logo from '../assets/img/Logo.jpg'
+import Logo from '../Component/img/Logo.jpg'
 
 export const SidebarComponent = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './TarjetaProducto.css';
-import Logo from '../assets/img/Logo.jpg'
+import Logo from '../img/Logo.jpg'
 
 const TarjetaProducto = ({ title, peso, calidad, details }) => {
   return (

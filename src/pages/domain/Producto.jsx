@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import BotonIngresar from "../Component/BotonIngresar"
-import TarjetaProducto from "../Component/TarjetaProducto"
-import Formularios from "../Component/Formulario";
+import TarjetaProducto from "../Component/tarjetas/TarjetaProducto"
+import Formularios from "../Component/formulario/Formulario";
+import BotonIngresar from '../Component/botones/BotonIngresar';
 import "./Productos.css";
 
 

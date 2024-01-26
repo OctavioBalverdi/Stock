@@ -1,9 +1,9 @@
 import { useState } from "react"
 import "./Formulario.css"
-import CampoTexto from "../Component/CampoTexto"
-import ListaPeso from "./ListaPeso"
-import ListaCalidad from "./ListaCalidad"
-import EscanerComponente from "./EscanerCodigo"
+import CampoTexto from "../listas/CampoTexto"
+import ListaPeso from "../listas/ListaPeso"
+import ListaCalidad from "../listas/ListaCalidad"
+import EscanerComponente from "../codigodebarra/EscanerCodigo"
 import {AiFillCloseCircle} from "react-icons/ai"
 
 
@@ -34,10 +34,7 @@ const Formularios = (props) => {
     return  <section className="formulario">
         <div className="ubicacion">
         <form onSubmit={manejarEnvio}>
-        <AiFillCloseCircle
-            className="eliminar"
-            onClick={cerrarFormulario}
-          />
+        <AiFillCloseCircle className="eliminar" onClick={cerrarFormulario}/>
             <h2>Producto</h2>
             <div className="Camp">
             <CampoTexto

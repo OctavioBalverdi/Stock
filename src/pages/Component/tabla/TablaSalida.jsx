@@ -1,24 +1,24 @@
 import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
-import { FechayHora } from './DatePicker';
+import { FechayHora } from "../DatePicker";
 
-export const TableComponententrada = ( ) => {
+export const TablaSalida = ( ) => {
 
 const dataArray = [
   {
-    avatar: "/public/frutilla.svg",
-    name: "Frutilla",
-    Calidad: "Premiun",
-    date: "Enero 19, 2024",
+    avatar: "/public/Cereza.svg",
+    name: "Cereza",
+    Calidad: "Grande",
+    date: "Enero 9, 2024",
     time: "3:45 pm",
-    amount: "KG: 100",
+    amount: "KG: 85",
     
   },
   {
     avatar: "/public/mango.svg",
     name: "Mango",
     Calidad: "Premiun",
-    date: "Diciembre 10, 2023",
+    date: "Diciembre 8, 2023",
     time: "4:45 pm",
     amount: "KG: 100",
   },
@@ -26,18 +26,18 @@ const dataArray = [
     avatar: "/public/frutilla.svg",
     name: "Frutilla",
     Calidad: "Grande",
-    date: "Enero 19, 2024",
+    date: "Enero 15, 2024",
     time: "3:45 pm",
-    amount: "KG: 100",
+    amount: "KG: 90",
     
   },
   {
-    avatar: "/public/cereza.svg",
-    name: "Cereza",
+    avatar: "/public/Frambuesa.svg",
+    name: "Frambuesa",
     Calidad: "Premium",
-    date: "Enero 19, 2024",
+    date: "Enero 5, 2024",
     time: "3:45 pm",
-    amount: "KG: 50",
+    amount: "KG: 55",
     
   },
   
@@ -50,7 +50,7 @@ const dataArray = [
       <Table.Caption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">Entrada</p>
+            <p className="text-body-1 font-semibold text-metal-600">Salida</p>
           </div>
           <div className="flex items-center gap-5">
             <Button type="outlineGray" size="sm">
