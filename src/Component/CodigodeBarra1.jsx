@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import "./CodigodeBarra2.css";
+import "./CodigodeBarra1.css";
 
-const CodigodeBarras2 = ({Texto}) => {
+const CodigodeBarras1 = ({Texto}) => {
   const [codigoBarras, setCodigoBarras] = useState('');
 
   const manejarCambioCodigoBarras = (event) => {
@@ -18,17 +18,17 @@ const CodigodeBarras2 = ({Texto}) => {
   };
 
   return (
-    <div className='CodigoDeBarras2'>
-      <label className= 'CodigoLabel2'htmlFor="codigoBarras">Ingrese el código de barras:</label>
-      < input className='CodigoInput2'
+    <div className='CodigoDeBarras1'>
+      <label className= 'CodigoLabel1'htmlFor="codigoBarras">Ingrese el código de barras:</label>
+      < input className='CodigoInput1'
         type="text"
         id="codigoBarras"
         value={codigoBarras}
         onChange={manejarCambioCodigoBarras}
       />
-      <button className='CodigoButton2' onClick={obtenerInformacionCodigoBarras}>{Texto}</button>
+      <button className='CodigoButton1' onClick={obtenerInformacionCodigoBarras}>{Texto}</button>
     </div>
   );
 };
 
-export default CodigodeBarras2;
+export default CodigodeBarras1;

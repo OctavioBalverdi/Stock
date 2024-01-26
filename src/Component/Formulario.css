@@ -38,3 +38,9 @@
     font-weight: 400;
     color: #212121;
 }
+
+.eliminar{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}

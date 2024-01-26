@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './TarjetaStock.css'; // Asegúrate de importar tu archivo de estilos
 import Logo from '../assets/img/Logo.jpg'
-import CodigodeBarra from './CodigodeBarras2';
+import CodigodeBarra2 from './CodigodeBarras2';
+import CodigodeBarras1 from './CodigodeBarra1';
 
 const TarjetaStock = ({ title, content }) => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -28,8 +29,10 @@ const TarjetaStock = ({ title, content }) => {
         <div className="filledbar"></div>
       </div>
       {/* Mostrar el formulario si mostrarFormulario es true */}
-      {mostrarFormulario && <CodigodeBarra Texto="INGRESAR"></CodigodeBarra>}
-      {mostrarFormulario2 && <CodigodeBarra Texto="SALIDA"></CodigodeBarra>}
+      <div className='CodigosdeB'>
+      {mostrarFormulario && <CodigodeBarras1 Texto="INGRESAR"></CodigodeBarras1>}
+      {mostrarFormulario2 && <CodigodeBarra2 Texto="SALIDA"></CodigodeBarra2>}
+      </div>
     </div>
   );
 };

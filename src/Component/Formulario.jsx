@@ -1,10 +1,10 @@
 import { useState } from "react"
 import "./Formulario.css"
 import CampoTexto from "../Component/CampoTexto"
-import Boton from "./Boton"
 import ListaPeso from "./ListaPeso"
 import ListaCalidad from "./ListaCalidad"
 import EscanerComponente from "./EscanerCodigo"
+import {AiFillCloseCircle} from "react-icons/ai"
 
 
 
@@ -14,10 +14,8 @@ const Formularios = (props) => {
     const [descripcion, actualizarDescripcion] = useState("")
     const [Calidad, actualizarCalidad] = useState("")
     const [Peso, ActualizarPeso] = useState("")
-    
-    
 
-    const { registrarColaborador } = props
+    const { registrarColaborador, cerrarFormulario  } = props
 
     const manejarEnvio = (e) => {
         e.preventDefault()
@@ -31,10 +29,15 @@ const Formularios = (props) => {
         registrarColaborador(datosAEnviar)
     }
 
+    
 
     return  <section className="formulario">
         <div className="ubicacion">
         <form onSubmit={manejarEnvio}>
+        <AiFillCloseCircle
+            className="eliminar"
+            onClick={cerrarFormulario}
+          />
             <h2>Producto</h2>
             <div className="Camp">
             <CampoTexto
