@@ -9,7 +9,11 @@
   transition: 0.4s ease-out;
   position: relative;
   flex-wrap: wrap;
+<<<<<<< HEAD
   margin-bottom: 3em;
+=======
+  margin-bottom: 4em;
+>>>>>>> 32b2949f9357b02094dd3ae3792401328f479c30
 }
 
 .cards:not(:first-child) {
