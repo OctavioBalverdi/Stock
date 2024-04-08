@@ -5,6 +5,7 @@ import ListaPeso from "../listas/ListaPeso"
 import ListaCalidad from "../listas/ListaCalidad"
 import EscanerComponente from "../codigodebarra/EscanerCodigo"
 import {AiFillCloseCircle} from "react-icons/ai"
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -14,6 +15,8 @@ const Formularios = (props) => {
     const [descripcion, actualizarDescripcion] = useState("")
     const [Calidad, actualizarCalidad] = useState("")
     const [Peso, ActualizarPeso] = useState("")
+
+    const navegador = useNavigate()
 
     const { registrarColaborador, cerrarFormulario  } = props
 
@@ -34,7 +37,7 @@ const Formularios = (props) => {
     return  <section className="formulario">
         <div className="ubicacion">
         <form onSubmit={manejarEnvio}>
-        <AiFillCloseCircle className="eliminar" onClick={cerrarFormulario}/>
+        <button onClick={navegador("/producto")}><AiFillCloseCircle className="eliminar" /></button>
             <h2>Producto</h2>
             <div className="Camp">
             <CampoTexto
