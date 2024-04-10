@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-
 import { Stock } from './pages/domain/stock';
 import { Entrada } from './pages/domain/entrada';
 import { Salida } from './pages/domain/salida'
-import { Logins } from './pages/Component/Logins';
+import Login1 from './pages/Component/Login/LoginRegister';
 import {Producto} from'./pages/domain/Producto'; 
 
 
@@ -18,8 +18,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Logins onlog={()=>{setAutentico(false)}} />} />
-        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/login" />}>
+        <Route path='/Login1' element={<Login1 onlog={()=>{setAutentico(false)}} />} />
+        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/Login1" />}>
            <Route path='/producto' element={<Producto />} />
            <Route path='/stock' element={<Stock />} />
            <Route path='/entrada' element={<Entrada />} />

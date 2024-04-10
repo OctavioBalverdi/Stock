@@ -2,6 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;600&display=swap');
+
 
 
 body {
@@ -18,15 +20,15 @@ body {
   .sidebar-container {
     display: flex;
     height: 1000px;
-    width: 200px; /* Ajusta según tus necesidades */
-    background-color: #070707; /* Ajusta el color de fondo según tus necesidades */
+    width: 195px; /* Ajusta según tus necesidades */
+    background-color: #fff; /* Ajusta el color de fondo según tus necesidades */
     
   }
   
   .content-container {
     flex: 1;
-    padding-left: 200px; /* Ajusta según el ancho de tu menú lateral */
-    padding: 20px; /* Ajusta según tus necesidades */
-    
+    padding-left: -100px; /* Ajusta según el ancho de tu menú lateral */
+    padding: 10px; /* Ajusta según tus necesidades */
+    margin: 10px 175px 20px;
   }
   

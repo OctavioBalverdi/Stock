@@ -22,25 +22,7 @@ import "./Stockpag.css";
   return <Matriz estantes={matrizEjemplo} />;
   
 
-  const matrizEjemplo = [
-    // Estante 1
-    [
-      ['A', 'B', 'C'],
-      ['D', 'E', 'F'],
-    ],
-    // Estante 2
-    [
-      ['G', 'H', 'I'],
-      ['J', 'K', 'L'],
-    ],
-    // ... más estantes
-    
-  ];
-
-  return <Matriz estantes={matrizEjemplo} />;
-  
-
-   /* return(
+    return(
           <>
         <div className="TarjetaStock">
             {<TarjetaStock/> }
@@ -48,13 +30,13 @@ import "./Stockpag.css";
         </div>
           
           </>
-    )*/
+    )
 }
 */
 export const Stock = () => {
   // Define variables para configurar la cantidad de estantes, filas y columnas :*
-  const numEstantes = 4;
-  const numFilas = 4;
+  const numEstantes = 2;
+  const numFilas = 3;
   const numColumnas = 5;
 
   // Crea una matriz dinámica basada en las variables :)
