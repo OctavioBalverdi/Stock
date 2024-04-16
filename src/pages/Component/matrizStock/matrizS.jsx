@@ -21,3 +21,22 @@ const Matriz = ({ estantes }) => {
 };
 
 export default Matriz;
+
+/*const Matriz = ({ estantes, productos }) => {
+  return (
+    <Tabs>
+      <TabList>
+        {estantes.map((_, index) => (
+          <Tab key={index}>Estante {index + 1}</Tab>
+        ))}
+      </TabList>
+      {estantes.map((filas, index) => (
+        <TabPanel key={index}>
+          <Estante filas={filas} productos={productos} estanteIndex={index} />
+        </TabPanel>
+      ))}
+    </Tabs>
+  );
+};
+
+export default Matriz;*/

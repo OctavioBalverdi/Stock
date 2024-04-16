@@ -2,6 +2,7 @@ import React from 'react';
 import Fila from './fila';
 import './matriS.css'
 
+
 const Estante = ({ filas }) => {
   return (
     <div>
@@ -14,3 +15,13 @@ const Estante = ({ filas }) => {
 };
 
 export default Estante;
+/*const Estante = ({ filas, productos, estanteIndex }) => {
+  return (
+    <div>
+      {filas.map((celdas, rowIndex) => (
+        <Fila key={rowIndex} celdas={celdas} productos={productos[estanteIndex]} />
+      ))}
+    </div>
+  );
+};
+export default Estante;*/
