@@ -3,16 +3,16 @@ import Fila from './fila';
 import './matriS.css'
 
 
-const Estante = ({ filas }) => {
+const Estante = ({ filas, productos }) => {
   return (
     <div>
       {filas.map((celdas, index) => (
-        <Fila key={index} celdas={celdas} />
+        <Fila key={index} celdas={celdas} productos={productos} />
       ))}
-      {console.log(filas)}
     </div>
   );
 };
+
 
 export default Estante;
 /*const Estante = ({ filas, productos, estanteIndex }) => {

@@ -4,16 +4,16 @@ import TarjetaStock from '../tarjetas/TarjetaStock';
 import './matriS.css'
 
 
-const Fila = ({ celdas }) => {
+const Fila = ({ celdas, productos }) => {
   return (
     <div className='target-item'>
       {celdas.map((contenido, index) => (
-        <TarjetaStock key={index} contenido={contenido} />
+        <TarjetaStock key={index} producto={productos[index]} />
       ))}
-      {console.log(celdas)}
     </div>
   );
 };
+
 
 export default Fila;
 

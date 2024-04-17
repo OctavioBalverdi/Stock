@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Estante from './Estante';
 
-const Matriz = ({ estantes }) => {
+const Matriz = ({ estantes, productos }) => {
   return (
     <Tabs>
       <TabList>
@@ -13,12 +13,13 @@ const Matriz = ({ estantes }) => {
       </TabList>
       {estantes.map((filas, index) => (
         <TabPanel key={index}>
-          <Estante filas={filas} />
+          <Estante filas={filas} productos={productos} />
         </TabPanel>
       ))}
     </Tabs>
   );
 };
+
 
 export default Matriz;
 
