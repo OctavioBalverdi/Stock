@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-
 import { Stock } from './pages/domain/stock';
 import { Entrada } from './pages/domain/entrada';
 import { Salida } from './pages/domain/salida'
-import Login1 from './pages/Component/Login/LoginRegister';
+import Login1 from './pages/Component/Login/log';
 import {Producto} from'./pages/domain/Producto'; 
 
 

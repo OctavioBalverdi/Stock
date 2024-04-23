@@ -4,13 +4,16 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: #dad7d7;
+    background: #5e5d5d;
     border: 1px solid #050505;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(77, 26, 26, 0.1);
     width: 300px;
     height: 200px ;
-    margin: 170px;
+    margin: 50px;
+    background-color: rgb(155, 151, 151);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
     
   }

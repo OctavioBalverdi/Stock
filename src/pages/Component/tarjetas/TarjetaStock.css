@@ -2,7 +2,7 @@
   display: flex;
   height: 250px;
   width: 190px;
-  background-color: #f6f4f8;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #00000044;
   margin-left: 50px;
@@ -30,7 +30,7 @@
 }
 
 .title-1 {
-  color: #ffffff;
+  color: #413838;
   font-size: 28px;
   font-weight: 800;
   position: absolute;
@@ -120,10 +120,10 @@
 
 .content {
   position: absolute;
-  padding: 20px;
-  top: 50px;
-  color: #eae0fd;
-  font-size: 0.7rem;
+  padding: 30px;
+  top: 135px;
+  color: #080808;
+  font-size: 13px;
 }
 
 .stroke {

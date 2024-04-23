@@ -4,7 +4,8 @@ import Logo from '../img/Logo.jpg'
 import CodigodeBarra2 from '../codigodebarra/CodigodeBarras2';
 import CodigodeBarras1 from '../codigodebarra/CodigodeBarra1';
 
-const TarjetaStock = ({ title, content }) => {
+const TarjetaStock = ({ producto }) => {
+  const { nombre, peso, calidad, color } = producto;
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [mostrarFormulario2, setMostrarFormulario2] = useState(false);
 
@@ -17,10 +18,12 @@ const TarjetaStock = ({ title, content }) => {
 
   return (
     <div className="cards">
-      <div className="title-1">{title}</div>
+      <div className="title-1">{nombre}</div>
       <img src={Logo} alt="" className='w-[250px] h-[250px] border rounded p-6' />
       <div className="content">
-        {content}
+        peso:{peso} <br></br>
+        calidad:{calidad} <br></br>
+        color:{color}
       </div>
       <button className="btn" onClick={handleIngresarClick} >Entrada</button>
       <button className="btn1" onClick={handleIngresarClick2}>Salida</button>
