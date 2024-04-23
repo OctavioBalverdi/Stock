@@ -20,9 +20,14 @@ export const Stock = () => {
   }
 
   const productos = [
+
     { nombre: 'Frutilla', peso: '30kg', calidad: 'Buena', color: 'rojas' },
     { nombre: 'Manzana', peso: '25kg', calidad: 'Media', color: 'verde' },
-    { nombre: 'Pera', peso: '20kg', calidad: 'Premium', color: 'amarilla' }
+    { nombre: 'Pera', peso: '20kg', calidad: 'Premium', color: 'amarilla' },
+    { nombre: 'Frutilla', peso: '30kg', calidad: 'primera calidad', color: 'rojas' },
+    { nombre: 'Manzana', peso: '25kg', calidad: 'segunda calidad', color: 'verde' },
+    { nombre: 'Pera', peso: '20kg', calidad: 'tercera calidad', color: 'amarilla' }
+
     // Otros productos...
   ];
 
