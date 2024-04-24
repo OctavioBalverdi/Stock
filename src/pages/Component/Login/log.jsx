@@ -3,6 +3,7 @@ import { useState } from 'react';
 import "./LoginRegister.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import {Root} from '../Root'
+import { Outlet } from 'react-router-dom';
 
  const Login1 = () => {
     const [password, setPassword] = useState('');
@@ -43,7 +44,7 @@ import {Root} from '../Root'
     }
 
     return (
-        <> {loginSuccessful ? <Root />:
+        <> {loginSuccessful ? <Outlet />:
         <div className='contenedorbody'>
               <div className='wrapper'>
            <div className='form-box login'>
