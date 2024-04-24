@@ -9,12 +9,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:6969"],
     methods: ["GET", "POST"]
 }));
 
 app.use('/', routes);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Estoy escuchando en el puerto ${port}`)
 })

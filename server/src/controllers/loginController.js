@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports.login = (req, res) =>{
     const {username, password} = req.body;
-    const consult = 'SELECT * FROM login WHERE username = ? AND password = ?';
+    const consult = 'SELECT * FROM USUARIO WHERE usuario = ? AND contrasena = ?';
 
     try {
       connection.query(consult, [username, password], (err, result)=>{

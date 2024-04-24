@@ -6,46 +6,38 @@ import { Stock } from './pages/domain/stock';
 import { Entrada } from './pages/domain/entrada';
 import { Salida } from './pages/domain/salida'
 import Login1 from './pages/Component/Login/log';
-import {Producto} from'./pages/domain/Producto'; 
-
+import { Producto } from './pages/domain/Producto';
+import { RutasProtegidas } from './pages/Component/RutasProte'
+import { Root } from './pages/Component/Root';
 
 function App() {
 
-    const [isAuthenticated, setAutentico] = useState(true);
+  const [isAuthenticated, setAutentico] = useState(true);
 
 
 
   return (
     <Router>
       <Routes>
-        <Route path='/Login1' element={<Login1 onlog={()=>{setAutentico(false)}} />} />
-        <Route path='/' element={isAuthenticated ? <Root /> : <Navigate to="/Login1" />}>
-           <Route path='/producto' element={<Producto />} />
-           <Route path='/stock' element={<Stock />} />
-           <Route path='/entrada' element={<Entrada />} />
-           <Route path='/salida' element={<Salida />} />
+        <Route element={<RutasProtegidas />}>
+          <Route path='/' element={<Root />}>
+            <Route path='/producto' element={<Producto />} />
+            <Route path='/stock' element={<Stock />} />
+            <Route path='/entrada' element={<Entrada />} />
+            <Route path='/salida' element={<Salida />} />
 
 
+          </Route>
         </Route>
-        
-        
-        
+
+
+
+
       </Routes>
     </Router>
   );
 }
 
-const Root = () => (
-  <>
-    <div className="contenedor">
-      <div className="sidebar-container">
-        <SidebarComponent />
-      </div>
-      <div className="content-container">
-        <Outlet />
-      </div>
-    </div>
-  </>
-);
+
 
 export default App;

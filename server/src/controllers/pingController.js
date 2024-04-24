@@ -1,7 +1,7 @@
 const connection = require('../models/db')
 
 module.exports.ping = (req, res) =>{
-    const consult = 'SELECT * FROM login';
+    const consult = 'SELECT * FROM USUARIO';
 
     try {
         connection.query(consult, (err, results)=>{
