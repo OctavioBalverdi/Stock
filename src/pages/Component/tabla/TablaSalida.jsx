@@ -1,6 +1,7 @@
 import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
-import { FechayHora } from "../DatePicker";
+import { FechayHora } from "../DatePicker"
+import {ExcelExporter} from "../botones/exportExelBoton"
 
 export const TablaSalida = ( ) => {
 
@@ -53,12 +54,9 @@ const dataArray = [
             <p className="text-body-1 font-semibold text-metal-600">Salida</p>
           </div>
           <div className="flex items-center gap-5">
-            <Button type="outlineGray" size="sm">
-              <span className="pr-2">
-                <FileXls size={32} color="#134fc9" />
-              </span>
-              Excel
-            </Button>
+            {/*aqui va el boton*/}
+            <ExcelExporter data={dataArray} fileName="table_data"/>
+            {/*aqui termina el espacio boton */}
            <FechayHora></FechayHora>
           </div>
         </div>
