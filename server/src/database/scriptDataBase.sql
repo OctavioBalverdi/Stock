@@ -21,17 +21,13 @@ SET usuario = 'Berrie Master',
     rol = 'admin'
 WHERE id = 1; 
 
-/*create database project_jwt;
-use project_jwt;
-
-create table login(
-	username varchar(50) not null,
-    password varchar(50) not null,
-    primary key(username, password)
+CREATE TABLE SALIDA (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    avatar VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    calidad VARCHAR(20) NOT NULL,
+    peso INT NOT NULL,
+	fecha_date DATE NOT NULL,
+    fecha_time TIME NOT NULL
+    
 );
-
-INSERT INTO login (username, password) VALUES
-    ('user1', '1234'),
-    ('user2', '1234'),
-    ('user3', '1234'),
-    ('user4', '1234');*/

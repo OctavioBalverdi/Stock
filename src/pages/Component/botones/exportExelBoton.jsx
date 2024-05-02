@@ -4,6 +4,12 @@ import { Button } from 'keep-react'
 import {FileXls } from 'phosphor-react';
 
 export function ExcelExporter({ data, fileName }) {
+    let arrayqueva =()=>{
+     const ArrayApasar = data.filter((e)=>{
+
+     })
+
+    }
     const exportToExcel = () => {
       const workbook = XLSX.utils.book_new();
       const worksheet = XLSX.utils.json_to_sheet(data);

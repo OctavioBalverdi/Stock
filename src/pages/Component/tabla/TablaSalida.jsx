@@ -2,10 +2,32 @@ import { Avatar, Badge, Button, Popover, Table, DatePicker  } from 'keep-react'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash, FileXls } from 'phosphor-react';
 import { FechayHora } from "../DatePicker"
 import {ExcelExporter} from "../botones/exportExelBoton"
+import { useEffect,useState } from 'react';
+import { Result } from 'postcss';
 
-export const TablaSalida = ( ) => {
+export const TablaSalida = ( data =[] ) => {
+  const [dataArray,setData]= useState([])
 
-const dataArray = [
+useEffect (()=>{
+
+  fetch('http://localhost:3000/salida', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response=> response.json())
+            .then(result => {
+              setData(result)
+                console.log(result)
+                
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+},[])
+
+/*const DataArray = [
   {
     avatar: "/public/Cereza.svg",
     name: "Cereza",
@@ -42,7 +64,7 @@ const dataArray = [
     
   },
   
-];
+];*/
 
 
   return (
@@ -70,19 +92,19 @@ const dataArray = [
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img={item.avatar} size="md" />
                     <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{item.name}</p>
-                      <span className="text-body-6 font-normal text-metal-500">{item.Calidad}</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{item.nombre}</p>
+                      <span className="text-body-6 font-normal text-metal-500">{item.calidad}</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">{item.date}</p>
-              <p className="text-body-6 font-normal text-metal-500">{item.time}</p>
+              <p className="text-body-5 font-medium text-metal-500">{item.fecha_date}</p>
+              <p className="text-body-6 font-normal text-metal-500">{item.fecha_time} hs</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">{item.amount}</p>
+              <p className="text-body-5 font-medium text-metal-500">kg: {item.peso}</p>
             </Table.Cell>
             
           <Table.Cell>
@@ -132,3 +154,4 @@ const dataArray = [
     </Table>
   );
 };
+

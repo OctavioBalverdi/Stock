@@ -7,7 +7,7 @@ import { Entrada } from './pages/domain/entrada';
 import { Salida } from './pages/domain/salida'
 import Login1 from './pages/Component/Login/log';
 import { Producto } from './pages/domain/Producto';
-import { RutasProtegidas } from './pages/Component/RutasProte'
+import  {RutasProtegidas}  from './pages/Component/RutasProte'
 import { Root } from './pages/Component/Root';
 
 function App() {
