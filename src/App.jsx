@@ -1,33 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { SidebarComponent } from './pages/Component/MenuLateral';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { Stock } from './pages/domain/stock';
 import { Entrada } from './pages/domain/entrada';
-import { Salida } from './pages/domain/salida'
-import Login1 from './pages/Component/Login/log';
+import { Salida } from './pages/domain/salida';
 import { Producto } from './pages/domain/Producto';
-import  RutasProtegidas  from './pages/Component/RutasProte'
+import  RutasProtegidas  from './pages/Component/RutasProte';
 import { Root } from './pages/Component/Root';
 
 function App() {
 
-  const [isAuthenticated, setAutentico] = useState(true);
-
-
-
   return (
     <Router>
       <Routes>
-        <Route element={<RutasProtegidas />}>
+        <Route element={<RutasProtegidas />} replace>
           <Route path='/' element={<Root />}> 
             <Route path='/producto' element={<Producto />} />
             <Route path='/stock' element={<Stock />} />
             <Route path='/entrada' element={<Entrada />} />
             <Route path='/salida' element={<Salida />} />
-
-
-          </Route>
+         </Route>
+         <Route path = '*' element={<> <p> 404 no hay nada aqui mi ray 8===D </p></>} />
         </Route>
 
 
@@ -37,7 +30,4 @@ function App() {
     </Router>
   );
 }
-
-
-
 export default App;

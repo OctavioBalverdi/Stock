@@ -31,3 +31,14 @@ CREATE TABLE SALIDA (
     fecha_time TIME NOT NULL
     
 );
+
+INSERT INTO SALIDA (avatar, nombre, calidad, peso, fecha_date, fecha_time) VALUES ('/public/Cereza.svg', 'Cereza', 'Grande', 85, '2024-01-09', '3:45');
+INSERT INTO SALIDA (avatar, nombre, calidad, peso, fecha_date, fecha_time) VALUES ('/public/mango.svg', 'Mango', 'Premiun', 100, '2023-12-08', '4:45');
+INSERT INTO SALIDA (avatar, nombre, calidad, peso, fecha_date, fecha_time) VALUES ('/public/frutilla.svg', 'Frutilla', 'Grande', 90, '2024-01-15', '3:45');
+INSERT INTO SALIDA (avatar, nombre, calidad, peso, fecha_date, fecha_time) VALUES ('/public/Frambuesa.svg', 'Frambuesa', 'Premium', 55, '2024-01-05', '3:45');
+
+CREATE TABLE PRODUCTO (
+id int primary key auto_increment not null,
+nombre varchar(50) not null,
+avatar LONGBLOB
+);
