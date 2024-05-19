@@ -5,83 +5,91 @@ import BotonIngresar from '../Component/botones/BotonIngresar';
 import "./Producto.css";
 
 
-export const Producto =()=>{
+export const Producto = () => {
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState('');
 
   const handleAddProduct = () => {
-    
-    const data={
-      nombre: name,
-      avatar: photo
+    const avatarProcesado = new FormData()
+    avatarProcesado.append('avatar', photo)
+    const data = {
+      nombre: JSON.stringify(name),
+      avatar: avatarProcesado
     }
 
-    fetch('http://localhost:3000/saveProduct', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify(data)
-        })
-            .then(response=> response.json())
-            .then(result => {
-             
-                console.log(result)
-                
-            })
-            .catch(error =>{
-                console.log(error)
-            })
-    
-    
-    
-    console.log('Nombre:', name);
-    console.log('Foto:', photo);
+    if (!name || !photo) {
+      alert('ERROR, Debes enviar tanto el nombre del producto como su foto')
+      return
+    } else {
+      
+      fetch('http://localhost:3000/saveProduct', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: data
+      })
+        .then(response => response.json())
+        .then(result => {
 
-    
-    setName('');
-    setPhoto('');
-    setShowForm(false);
+          console.log(result)
+
+        })
+        .catch(error => {
+          console.error(error)
+        })
+
+      setName('');
+      setPhoto('');
+      document.getElementById("NOMBRE").value=""
+      document.getElementById("FOTO").value=null
+      setShowForm(false);
+    }
   };
   return (
     <div className="bodylon">
       <div className="productos-container">
-    <h2 className="productos-header">Agregar Producto</h2>
-    {!showForm ? (
-      <button className="form-button" onClick={() => setShowForm(true)}>Agregar</button>
-    ) : (
-      <form className="form-container">
-        <label className="form-label">
-          Nombre:
-          <input
-            className="form-input"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label className="form-label">
-          Foto:
-          <input
-            className="form-input"
-            type="file"
-            onChange={(e) => setPhoto(e.target.files[0])}
-          />
-        </label>
-        <button className="form-button" type="button" style={{backgroundColor: 'red'}} onClick={handleAddProduct}>
-          Agregar
-        </button>
-        <button className="form-button" type="button" style={{backgroundColor: 'red'}} onClick={() => setShowForm(false)}>
-          Salir
-        </button>
-      </form>
-    )}
-  </div>
+        <h2 className="productos-header">Agregar Producto :D</h2>
+        {!showForm ? (
+          <button className="form-button" onClick={() => setShowForm(true)}>Agregar</button>
+        ) : (
+          <form className="form-container">
+            <label className="form-label">
+              Nombre:
+              <input 
+                id="NOMBRE"
+                className="form-input"
+                type="text"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </label>
+            <label className="form-label">
+              Foto:
+              <input
+                id="FOTO"
+                className="form-input"
+                type="file"
+                onChange={(e) => setPhoto(e.target.files[0])}
+              />
+            </label>
+           <div className="botn-form">
+           <button className="form-button" type="button" style={{ backgroundColor: 'red',display:'inlane-block'}} onClick={handleAddProduct}>
+              Agregar
+            </button>
+            <button className="form-button" type="button" style={{ backgroundColor: 'red',display:'inlane-block' }} onClick={() => setShowForm(false)}>
+              Salir
+            </button>
+           </div>
+          </form>
+        )}
+      </div>
     </div>
-);
-  
-  
+  );
+
+
 }
 
 
@@ -109,8 +117,8 @@ export const Producto =()=>{
           <BotonIngresar texto = "Eliminar"></BotonIngresar>
         </div> aqui cierro*/
 
-        {/* Mostrar el formulario si mostrarFormulario es true */}
-         /* aqui empieza {mostrarFormulario && <Formularios />}
-        </> aqui cierra 
-        
-    )*/
+{/* Mostrar el formulario si mostrarFormulario es true */ }
+/* aqui empieza {mostrarFormulario && <Formularios />}
+</> aqui cierra 
+ 
+)*/
