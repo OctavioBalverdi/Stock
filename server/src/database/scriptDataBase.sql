@@ -44,3 +44,18 @@ avatar LONGBLOB
 );
 
 INSERT PRODUCTO (nombre, avatar) values (?,?)
+/*aqui vamos a modificar la tbl para hacer una relacion y postriormente un join*/
+
+CREATE TABLE SALIDA (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    producto_id INT NOT NULL,
+    calidad VARCHAR(20) NOT NULL,
+    peso INT NOT NULL,
+    fecha_date DATE NOT NULL,
+    fecha_time TIME NOT NULL,
+    FOREIGN KEY (producto_id) REFERENCES PRODUCTO(id)
+);
+
+SELECT S.id, P.nombre, P.avatar, S.calidad, S.peso, S.fecha_date, S.fecha_time
+FROM SALIDA S
+JOIN PRODUCTO P ON S.producto_id = P.id; /*union de tablas en un join*/
