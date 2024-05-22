@@ -39,6 +39,8 @@ INSERT INTO SALIDA (avatar, nombre, calidad, peso, fecha_date, fecha_time) VALUE
 
 CREATE TABLE PRODUCTO (
 id int primary key auto_increment not null,
-nombre varchar(50) not null,
+nombre varchar(100) not null,
 avatar LONGBLOB
 );
+
+INSERT PRODUCTO (nombre, avatar) values (?,?)

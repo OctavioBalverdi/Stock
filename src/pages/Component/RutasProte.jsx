@@ -1,9 +1,25 @@
-
-
-
-
-
+// RutasProtegidas.js
 import React from 'react';
+import { Navigate ,Outlet} from 'react-router-dom';
+import Login1 from './Login/log';
+import { Root } from './Root';
+
+function RutasProtegidas({ isAuthenticated }) {
+  if (!isAuthenticated) {
+    // Puedes redirigir a una página de carga o login
+    return <Login1/>;
+  }
+
+  return <Root />;
+}
+
+export default RutasProtegidas;
+
+
+
+
+
+/*import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Login1 from './Login/log';
 import { Root } from './Root';
@@ -29,4 +45,4 @@ export const RutasProtegidas = () => {
     return <>{tokenExistAndStillValid ? <Root /> : <Login1 />}</>;
 }
 
-export default RutasProtegidas;
+export default RutasProtegidas;*/

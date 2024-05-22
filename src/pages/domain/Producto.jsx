@@ -11,12 +11,14 @@ export const Producto = () => {
   const [photo, setPhoto] = useState('');
 
   const handleAddProduct = () => {
-    const avatarProcesado = new FormData()
-    avatarProcesado.append('avatar', photo)
-    const data = {
+    const formdata = new FormData()
+
+    formdata.append('nombre', name)
+    formdata.append('avatar', photo)
+   /* const data = {
       nombre: JSON.stringify(name),
       avatar: avatarProcesado
-    }
+    }*/
 
     if (!name || !photo) {
       alert('ERROR, Debes enviar tanto el nombre del producto como su foto')
@@ -25,10 +27,8 @@ export const Producto = () => {
       
       fetch('http://localhost:3000/saveProduct', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: data
+        
+        body: formdata
       })
         .then(response => response.json())
         .then(result => {
