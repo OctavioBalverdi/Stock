@@ -3,6 +3,7 @@ import TarjetaProducto from "../Component/tarjetas/TarjetaProducto"
 import Formularios from "../Component/formulario/Formulario";
 import BotonIngresar from '../Component/botones/BotonIngresar';
 import "./Producto.css";
+import ProductoCard from '../Component/tarjetas/productocard'
 
 
 export const Producto = () => {
@@ -15,19 +16,19 @@ export const Producto = () => {
 
     formdata.append('nombre', name)
     formdata.append('avatar', photo)
-   /* const data = {
-      nombre: JSON.stringify(name),
-      avatar: avatarProcesado
-    }*/
+    /* const data = {
+       nombre: JSON.stringify(name),
+       avatar: avatarProcesado
+     }*/
 
     if (!name || !photo) {
       alert('ERROR, Debes enviar tanto el nombre del producto como su foto')
       return
     } else {
-      
+
       fetch('http://localhost:3000/saveProduct', {
         method: 'POST',
-        
+
         body: formdata
       })
         .then(response => response.json())
@@ -42,51 +43,77 @@ export const Producto = () => {
 
       setName('');
       setPhoto('');
-      document.getElementById("NOMBRE").value=""
-      document.getElementById("FOTO").value=null
+      document.getElementById("NOMBRE").value = ""
+      document.getElementById("FOTO").value = null
       setShowForm(false);
     }
   };
   return (
-    <div className="bodylon">
-      <div className="productos-container">
-        <h2 className="productos-header">Agregar Producto :D</h2>
-        {!showForm ? (
-          <button className="form-button" onClick={() => setShowForm(true)}>Agregar</button>
-        ) : (
-          <form className="form-container">
-            <label className="form-label">
-              Nombre:
-              <input 
-                id="NOMBRE"
-                className="form-input"
-                type="text"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </label>
-            <label className="form-label">
-              Foto:
-              <input
-                id="FOTO"
-                className="form-input"
-                type="file"
-                onChange={(e) => setPhoto(e.target.files[0])}
-              />
-            </label>
-           <div className="botn-form">
-           <button className="form-button" type="button" style={{ backgroundColor: 'red',display:'inlane-block'}} onClick={handleAddProduct}>
-              Agregar
-            </button>
-            <button className="form-button" type="button" style={{ backgroundColor: 'red',display:'inlane-block' }} onClick={() => setShowForm(false)}>
-              Salir
-            </button>
-           </div>
-          </form>
+    <>
+      <div className="min-h-screen flex flex-col items-center pt-4">
+        <div className="bg-gray-100 p-4 shadow-md w-full flex justify-between items-center">
+          <h2 className="text-3xl font-semibold text-red-700 text">Agregar Producto Aqui!</h2>
+          <button
+            className="bg-red-500 text-white py-2 px-6 rounded-full hover:bg-red-600 transition duration-300"
+            onClick={() => setShowForm(true)}
+          >
+            Agregar
+          </button>
+        </div>
+
+        {showForm && (
+          <div className="flex flex-col items-center justify-center w-full mt-8">
+            <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+              <form className="space-y-6 w-full">
+                <div>
+                  <label htmlFor="NOMBRE" className="block text-sm font-medium text-gray-700 mb-1">
+                    Nombre:
+                  </label>
+                  <input
+                    id="NOMBRE"
+                    className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="FOTO" className="block text-sm font-medium text-gray-700 mb-1">
+                    Foto:
+                  </label>
+                  <input
+                    id="FOTO"
+                    className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                    type="file"
+                    onChange={(e) => setPhoto(e.target.files[0])}
+                  />
+                </div>
+                <div className="flex justify-between mt-4">
+                  <button
+                    className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-300"
+                    type="button"
+                    onClick={handleAddProduct}
+                  >
+                    Agregar
+                  </button>
+                  <button
+                    className="bg-gray-300 text-gray-700 py-2 px-4 rounded-full hover:bg-gray-400 transition duration-300"
+                    type="button"
+                    onClick={() => setShowForm(false)}
+                  >
+                    Salir
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         )}
+        <br />
+        <ProductoCard nombre="rodrigo" foto='/public/Cereza.svg/'/>
       </div>
-    </div>
+      
+    </>
   );
 
 
