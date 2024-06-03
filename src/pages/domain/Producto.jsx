@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TarjetaProducto from "../Component/tarjetas/TarjetaProducto"
 import Formularios from "../Component/formulario/Formulario";
 import BotonIngresar from '../Component/botones/BotonIngresar';
@@ -10,6 +10,22 @@ export const Producto = () => {
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState('');
+  const [files, setFiles] = useState([]);
+  const [fileupdated, setFileupdated] = useState(false)
+
+
+
+  useEffect(() => {
+    fetch('http://localhost:3000/productos/get')
+      .then(response => response.json())
+      .then(response => {
+        setFiles(response)
+        console.log(response)
+      })
+      .catch(error => { console.error(error) })
+
+    setFileupdated(false)
+  }, [fileupdated])
 
   const handleAddProduct = () => {
     const formdata = new FormData()
@@ -31,10 +47,12 @@ export const Producto = () => {
 
         body: formdata
       })
-        .then(response => response.json())
-        .then(result => {
+        .then(response => response.text())
+        .then(response => {
 
-          console.log(result)
+
+          console.log(response)
+          setFileupdated(true)
 
         })
         .catch(error => {
@@ -56,18 +74,18 @@ export const Producto = () => {
           <button
             className="bg-red-500 text-white py-2 px-6 rounded-full hover:bg-red-600 transition duration-300"
             onClick={() => setShowForm(true)}
+            hidden={showForm? true:false}
           >
             Agregar
           </button>
         </div>
-
-        {showForm && (
+         {showForm && (
           <div className="flex flex-col items-center justify-center w-full mt-8">
             <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
               <form className="space-y-6 w-full">
                 <div>
                   <label htmlFor="NOMBRE" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nombre:
+                    Nombre de tu nuevo producto:
                   </label>
                   <input
                     id="NOMBRE"
@@ -94,6 +112,7 @@ export const Producto = () => {
                     className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-300"
                     type="button"
                     onClick={handleAddProduct}
+                    
                   >
                     Agregar
                   </button>
@@ -110,9 +129,12 @@ export const Producto = () => {
           </div>
         )}
         <br />
-        <ProductoCard nombre="rodrigo" foto='/public/Cereza.svg/'/>
+        <ProductoCard files={files}/>
+        
+
+
       </div>
-      
+
     </>
   );
 
@@ -148,4 +170,14 @@ export const Producto = () => {
 /* aqui empieza {mostrarFormulario && <Formularios />}
 </> aqui cierra 
  
-)*/
+)
+
+<div className="contenedordefotos" style={{ display: 'flex',flexWrap:'wrap',margin:'10px' }}>
+          {files.map((image) => (
+
+            <img key={image} src={'http://localhost:3000/' + image} alt={image} style={{width:'25vw',height:'30vh', margin:'5px'}}/>
+
+
+          ))}
+
+        </div>*/
